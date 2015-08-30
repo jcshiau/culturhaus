@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .jumbotron{
+background-image: url("../assets/images/landscape-jeff.jpg");
+}
