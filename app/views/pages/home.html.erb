@@ -1,5 +1,12 @@
 <div class="jumbotron center">
 	<h1>Access Real Examples of</h1>
 	<h1>Brilliant Company Culture</h1>
-	<p>Find a solution today <%= link_to "Sign Up", "#", class: "btn btn-primary" %></p>
+	
+	<% if user_signed_in? %>
+		#do something
+	<% else %>
+		<p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+		<p>Already a Member? <%= link_to "Sign In", new_user_session_path %></p>
+	<% end %>
+
 </div>
