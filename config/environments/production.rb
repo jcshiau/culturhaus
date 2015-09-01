@@ -77,7 +77,18 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  #Required for Heroku
+  # Required for Heroku
   # Note to set this to your own host name
   config.action_mailer.default_url_options = { host: 'culturhaus.herokuapp.com' }
+
+  #required for heroku
+  #paperclip
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
 end
