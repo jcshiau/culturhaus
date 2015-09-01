@@ -1,18 +1,6 @@
-<div class="panel panel-default">
-	<div class="panel-header">
-		<div class="panel-title">
-			<h1>Editing Post</h1>
-		</div><!--panel title-->
-	</div><!--panel header-->
+<h1>Editing Post</h1>
 
-<div class="panel-body">
-	<div class="form-group">
-		<%= render 'form', class: "form-control" %>
-	</div><!--form group-->
-</div><!--panel body-->
+<%= render 'form' %>
 
-<div class="panel-footer">
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>
-</div><!--panel footer-->
-</div><!--panel default-->
