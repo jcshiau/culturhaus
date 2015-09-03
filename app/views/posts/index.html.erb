@@ -8,7 +8,8 @@
         <div class="panel-body">
           <p><%= post.description %></p>
           <p><strong><%= post.user.name if post.user %></strong></p>
-          <% if post.user == current_user %>
+          
+          <% if current_user && (post.user == current_user) %>
             <div class="actions">
               
               <%= link_to edit_post_path(post) do %>
@@ -21,6 +22,7 @@
             
             </div>
           <% end %>
+        
         </div>
       </div>
   <% end %>
